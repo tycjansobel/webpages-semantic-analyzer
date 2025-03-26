@@ -22,7 +22,7 @@ Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, przez
 #### Co mozna by doiplementować gdyby poświęcić więcej czasu
 Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. Moim zdaniem warto skupić się na kilku rzeczach, które można by dopracować przy większym nakładzie czasu:
 
-1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron, tego nie robiłem w obecnej wersji.
+1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron ze tego implementowałem.
 
 2. Dla kilku linków czasy odpowiedzi u mnie lokalnie to jest 10-12s (drugi strzał, pierwszy trwa dłuzej poniewaz jest razem z pobraniem modelu) nie mam gpu, mój sprzęt to macbook z m3 pro. 
 Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie zastanowic na kolejkowaniem tasków i zwracaniem wyników asynchronicznie
