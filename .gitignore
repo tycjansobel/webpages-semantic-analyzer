@@ -1,0 +1,7 @@
+.idea
+.env
+src/__pycache__/
+__pycache__
+/notebooks/
+.vscode
+/data/
