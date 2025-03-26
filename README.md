@@ -13,13 +13,13 @@ https://huggingface.co/sdadas/stella-pl/blob/main/tokenizer_config.json -> model
 
 #### Porównywanie semantyczne wektorów
 Użyłem podobieństwa cosinusowego, które jest symetryczne - oznacza to, że dla inputu wektor A i wektor B zwróci tę samą wartość co dla inputu wektor B i wektor A.
-W rezultacie wykluczyłem z wyników porównania tych samych stron w odwrotnej kolejności.
+W rezultacie wykluczyłem z wyników porównania te same strony w odwrotnej kolejności.
 Sama operacja liczenia podobieństwa cosinusowego nie jest wymagająca obliczeniowo.
 
 #### Zwracanie rzeczowników w podstawowej formie
-Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, przez co zwracanie rzeczowników działa dla polskich stron, mona doimplementować wiele języków spaCy to wspiera tylko trzeba pobrać dodatkowe paczki
+Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, zwracanie rzeczowników w formie podstawowej działa dla poslko języcznych stron. Można dopisać oczywiście funkcjonalność wielu języków
 
-#### Co mozna by doiplementować gdyby poświęcić więcej czasu
+#### Co możnaby doiplementować gdyby poświęcić więcej czasu
 Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. Moim zdaniem warto skupić się na kilku rzeczach, które można by dopracować przy większym nakładzie czasu:
 
 1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron ze tego implementowałem.
