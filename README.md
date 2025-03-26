@@ -24,7 +24,7 @@ Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. 
 
 1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron, tego nie robiłem w obecnej wersji.
 
-2. Dla kilku linków czasy odpowiedzi u mnie lokalnie to jest 10-12s (drugi strzał, pierwszy trwa dłuzej poniewaz jest razem z pobraniem modelu) nie mam gpu, mój sprzęt to macbooka z m3 pro. 
+2. Dla kilku linków czasy odpowiedzi u mnie lokalnie to jest 10-12s (drugi strzał, pierwszy trwa dłuzej poniewaz jest razem z pobraniem modelu) nie mam gpu, mój sprzęt to macbook z m3 pro. 
 Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie zastanowic na kolejkowaniem tasków i zwracaniem wyników asynchronicznie
 
 3. Zapisywanie wektorów do bazy wektorowej aby nie liczyć w kołko tych samych stron (qdrant, elasticsearch, weaviate)
