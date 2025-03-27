@@ -32,11 +32,17 @@ Podszedłbym do tego w taki sposób
 Dla każdego contentu strony generowana jest suma kontrolna (hash) na podstawie jego zawartości:
     
     1.Hash służy jako unikalny identyfikator dokumentu w bazie danych
+    
     2. Wektor embedding jest przechowywany w powiązaniu z tym identyfikatorem
+    
     3. Przy kolejnych operacjach na dokumencie:
+    
     4. Najpierw obliczany jest hash aktualnej zawartości
+    
     5. System sprawdza czy hash już istnieje w bazie
+    
     6. Jeśli hash istnieje, wykorzystywany jest zapisany wcześniej wektor
+    
     7. Tylko w przypadku nowego hasha generowany jest nowy embedding
 
 Mozna równiez uzyć bazy wektorowej (qdrant, elasticsearch, weaviate) i zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony, lub kolekcji za pomoca KNN, w istniejącym zbiorze.
