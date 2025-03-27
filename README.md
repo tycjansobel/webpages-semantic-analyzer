@@ -30,19 +30,18 @@ Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie za
 3. Zapisywanie wygenerowanych wektorów do bazy aby nie generować w kołko wektorów dla stron dla stron których juz wygenerowaliśmy wektor
 Podszedłbym do tego w taki sposób
 Dla każdego contentu strony generowana jest suma kontrolna (hash) na podstawie jego zawartości:
+    
     1.Hash służy jako unikalny identyfikator dokumentu w bazie danych
     2. Wektor embedding jest przechowywany w powiązaniu z tym identyfikatorem
     3. Przy kolejnych operacjach na dokumencie:
-
     4. Najpierw obliczany jest hash aktualnej zawartości
     5. System sprawdza czy hash już istnieje w bazie
     6. Jeśli hash istnieje, wykorzystywany jest zapisany wcześniej wektor
     7. Tylko w przypadku nowego hasha generowany jest nowy embedding
 
-Mozna równiez uzyc bazu wektorowej (qdrant, elasticsearch, weaviate) i zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony, lub kolekcji za pomoca KNN, w istniejącym zbiorze.
+Mozna równiez uzyć bazy wektorowej (qdrant, elasticsearch, weaviate) i zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony, lub kolekcji za pomoca KNN, w istniejącym zbiorze.
 
-4. Wdrozenie modelu encoder-only na chmurę (sagemaker, vertex ai) lub inne środowisko z gpu, aby efektywnie korzystać z endpointu inferencji i oddzielić kod który nie jest tak wymagący obliczeniowo jak same generowanie embeddingu
-wtedy mozna byc skalować ten kod i kolejkować inferencje
+4. Wdrozenie modelu encoder-only na chmurę (sagemaker, vertex ai) lub inne środowisko z gpu, aby efektywnie korzystać z endpointu inferencji i oddzielić kod który nie jest tak wymagący obliczeniowo jak same generowanie embeddingu wtedy mozna by skalować ten kod i kolejkować inferencje
 
 ### Przykładowy request
 
