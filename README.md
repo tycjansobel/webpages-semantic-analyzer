@@ -27,9 +27,8 @@ Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. 
 2. Dla kilku linków czasy odpowiedzi u mnie lokalnie to jest 10-12s (drugi strzał, pierwszy trwa dłuzej poniewaz jest razem z pobraniem modelu) nie mam gpu, mój sprzęt to macbook z m3 pro. 
 Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie zastanowic na kolejkowaniem tasków i zwracaniem wyników asynchronicznie
 
-3. Zapisywanie wygenerowanych wektorów do bazy aby nie generować w kołko wektorów dla stron dla stron których juz wygenerowaliśmy wektor
-Podszedłbym do tego w taki sposób
-Dla każdego contentu strony generowana jest suma kontrolna (hash) na podstawie jego zawartości:
+3. Zapisywanie wygenerowanych wektorów do bazy aby nie generować w kołko wektorów dla stron których juz wygenerowaliśmy wektor.
+Podszedłbym do tego w taki sposób ze dla każdego contentu strony generowana jest suma kontrolna (hash) na podstawie jego zawartości:
     
     1.Hash służy jako unikalny identyfikator dokumentu w bazie danych
     
