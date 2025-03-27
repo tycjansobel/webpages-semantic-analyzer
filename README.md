@@ -72,7 +72,7 @@ przykładowa odpowiedź
 
 Zbudowanie obrazu i uruchomienie
 
-Niestety na trzeba poczekać na spacy az zaleznosc z cpython sie zbuduje wiec chwile to trwa
+Niestety trzeba poczekać na spacy az zaleznosc z cpython sie zbuduje więc chwile to trwa
 ```
 docker build -t api:latest .
 ```
