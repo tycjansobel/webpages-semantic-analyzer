@@ -17,7 +17,7 @@ W rezultacie wykluczyłem z wyników porównania te same strony w odwrotnej kole
 Sama operacja liczenia podobieństwa cosinusowego nie jest wymagająca obliczeniowo.
 
 #### Zwracanie rzeczowników w podstawowej formie
-Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, zwracanie rzeczowników w formie podstawowej działa dla poslko-języcznych stron. Można dopisać oczywiście funkcjonalność wielu języków
+Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, zwracanie rzeczowników w formie podstawowej działa dla polsko-języcznych stron. Można dopisać oczywiście funkcjonalność wielu języków
 
 #### Co możnaby doiplementować gdyby poświęcić więcej czasu
 Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. Moim zdaniem warto skupić się na kilku rzeczach, które można by dopracować przy większym nakładzie czasu:
