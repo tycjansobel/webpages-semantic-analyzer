@@ -17,19 +17,19 @@ W rezultacie wykluczyłem z wyników porównania te same strony w odwrotnej kole
 Sama operacja liczenia podobieństwa cosinusowego nie jest wymagająca obliczeniowo.
 
 #### Zwracanie rzeczowników w podstawowej formie
-Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, zwracanie rzeczowników w formie podstawowej działa dla poslko języcznych stron. Można dopisać oczywiście funkcjonalność wielu języków
+Użyłem biblioteki spaCy do NLP i pobrałem zasób dla języka polskiego, zwracanie rzeczowników w formie podstawowej działa dla poslko-języcznych stron. Można dopisać oczywiście funkcjonalność wielu języków
 
 #### Co możnaby doiplementować gdyby poświęcić więcej czasu
 Projekt był tworzony przeze mnie w jeden wieczór, więc nie jest perfekcyjny. Moim zdaniem warto skupić się na kilku rzeczach, które można by dopracować przy większym nakładzie czasu:
 
-1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron ze tego implementowałem.
+1. Użyć asyncio i aiohttp, żeby pobierać asynchronicznie wszystkie strony jednocześnie zamiast w pętli. Na ten moment proces działał na tyle szybko dla kilku stron ze tego nie implementowałem.
 
 2. Dla kilku linków czasy odpowiedzi u mnie lokalnie to jest 10-12s (drugi strzał, pierwszy trwa dłuzej poniewaz jest razem z pobraniem modelu) nie mam gpu, mój sprzęt to macbook z m3 pro. 
 Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie zastanowic na kolejkowaniem tasków i zwracaniem wyników asynchronicznie
 
 3. Zapisywanie wektorów do bazy wektorowej aby nie liczyć w kołko tych samych stron (qdrant, elasticsearch, weaviate)
 ja podszedłbym do tego w taki sposób ze liczyłbym sumę kontrolną z contentu stony i uzywał jako ID takiego dokumentu z wektorem i sprawdzania czy content się zmienił, wtedy za pomocą takiego ID mógłbym wyciągnąć gotowy wektor i porównać, bez generowania embeddingu na nowo gdyz jest to najbardziej kosztowne obliczeniowo.
-Mona równie zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony
+Mozna równiez zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony, lub kolekcji za pomoca KNN
 
 4. Wdrozenie modelu do encoder-only na chmurę (sagemaker, vertex ai) lub inne środowisko z gpu, aby efektywnie korzystać z endpointu inferencji i oddzielić kod który nie jest tak wymagący obliczeniowo jak same generowanie embeddingu
 wtedy mozna byc skalować ten kod i kolejkować inferencje
