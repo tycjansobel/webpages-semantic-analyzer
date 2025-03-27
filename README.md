@@ -31,7 +31,7 @@ Uwazam ze nie powinno się takich obliczen generować w locie więc warto sie za
 ja podszedłbym do tego w taki sposób ze liczyłbym sumę kontrolną z contentu stony i uzywał jako ID takiego dokumentu z wektorem i sprawdzania czy content się zmienił, wtedy za pomocą takiego ID mógłbym wyciągnąć gotowy wektor i porównać, bez generowania embeddingu na nowo gdyz jest to najbardziej kosztowne obliczeniowo.
 Mozna równiez zrobić indeks na polu wektorowym i przeszukiwać zbiory wektorem w poszukiwaniu najbardziej podobnej semantycznie strony, lub kolekcji za pomoca KNN
 
-4. Wdrozenie modelu do encoder-only na chmurę (sagemaker, vertex ai) lub inne środowisko z gpu, aby efektywnie korzystać z endpointu inferencji i oddzielić kod który nie jest tak wymagący obliczeniowo jak same generowanie embeddingu
+4. Wdrozenie modelu encoder-only na chmurę (sagemaker, vertex ai) lub inne środowisko z gpu, aby efektywnie korzystać z endpointu inferencji i oddzielić kod który nie jest tak wymagący obliczeniowo jak same generowanie embeddingu
 wtedy mozna byc skalować ten kod i kolejkować inferencje
 
 ### Przykładowy request
